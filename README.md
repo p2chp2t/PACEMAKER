@@ -1,6 +1,8 @@
-# PaceMaker
+# PACE: Towards Surfacing Hidden Conflicts in User Requests
 
-**PaceMaker** is a conflict-aware retrieval and reasoning framework for personalized assistants. This is the implementation for our paper "[PACE: Towards Surfacing Hidden Conflicts in User Requests]".
+**PaceMaker** is a conflict-aware retrieval and reasoning framework for personalized assistants.
+
+PaceMaker retrieves relevant evidence from a user-specific knowledge base and reasons about whether a user request is feasible given the user's circumstances, commitments, and constraints.
 
 ## Quick Start
 
@@ -12,8 +14,8 @@ Clone the repository and create a virtual environment:
 git clone https://github.com/p2chp2t/pacemaker
 cd pacemaker
 
-python -m venv .venv
-source .venv/bin/activate
+conda create -n pacemaker python
+conda activate pacemaker
 ```
 
 Install the required packages:
@@ -106,7 +108,7 @@ The default configuration in the released code uses:
 
 | Component         | Default Model                 |
 | ----------------- | ----------------------------- |
-| Dense retrieval   | `Qwen/Qwen3-Embedding-8B`     |
+| Embedding         | `Qwen/Qwen3-Embedding-8B`     |
 | Retrieval agents  | `Qwen/Qwen3-4B-Instruct-2507` |
 | Answer generation | `Qwen/Qwen3-4B-Instruct-2507` |
 | Judge             | `gpt-5.4-mini`                |
@@ -118,7 +120,7 @@ When running the scripts:
 * `<API_KEY>` should be the authentication key expected by that server.
 * `<YOUR_OPENAI_API_KEY>` is required when using OpenAI models directly.
 
-The dense retriever supports SentenceTransformers embedding models, as well as the following OpenAI embedding models:
+The embedding module supports SentenceTransformers models, as well as the following OpenAI embedding models:
 
 * `text-embedding-3-small`
 * `text-embedding-3-large`

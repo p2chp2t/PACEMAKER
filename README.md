@@ -126,7 +126,7 @@ The embedding module supports SentenceTransformers models, as well as the follow
 * `text-embedding-3-large`
 * `text-embedding-ada-002`
 
-**NV-Embed-v2** and **Gemini-based configurations** reported in the paper were run using separate experimental code and are not supported by the current release.
+> **Note:** This repository contains the implementation used to run the PaceMaker pipeline. Some additional model configurations reported in the paper were evaluated using separate experimental code and are not included in the current release.
 
 ## Citation
 

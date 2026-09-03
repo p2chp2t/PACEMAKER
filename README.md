@@ -50,10 +50,23 @@ data/pace/
 
 ### 1. Build indices
 
+Using the default SentenceTransformers embedding model:
+
 ```bash
 python scripts/1_build_index.py \
     --data_dir data/pace/kb \
     --index_root <INDEX_DIR>
+```
+
+To use an OpenAI embedding model:
+
+```bash
+export OPENAI_API_KEY=<OPENAI_API_KEY>
+
+python scripts/1_build_index.py \
+    --data_dir data/pace/kb \
+    --index_root <INDEX_DIR> \
+    --dense_model <OPENAI_EMBEDDING_MODEL>
 ```
 
 ### 2. Run retrieval

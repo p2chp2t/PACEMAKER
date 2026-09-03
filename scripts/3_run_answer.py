@@ -13,7 +13,7 @@ from src.answer_module import AnswerGenerator
 from src.data_utils import load_json, load_query_bundle, save_json
 from src.types import ScoredDoc
 
-OPENAI_API_KEY = ""
+OPENAI_API_KEY = "" # Set your OpenAI API key here or use environment variable OPENAI_API_KEY. For vLLM, you can use a dummy key like "EMPTY" or set VLLM_API_KEY.
 
 
 def load_persona_name(profile_path: Path) -> str:
@@ -147,7 +147,7 @@ def main() -> None:
     parser.add_argument("--profile_dir", type=str, required=True)
     parser.add_argument("--out_root", type=str, required=True)
     parser.add_argument("--model", type=str, default="Qwen/Qwen3-4B-Instruct-2507")
-    parser.add_argument("--max_docs", type=int, default=8)
+    parser.add_argument("--max_docs", type=int, default=10)
 
     parser.add_argument(
         "--backend",

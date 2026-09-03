@@ -1,3 +1,4 @@
+datasets
 openai
 sentence-transformers
 faiss-cpu
